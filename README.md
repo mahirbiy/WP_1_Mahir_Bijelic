@@ -6,9 +6,13 @@ Projekat je podijeljen na dva glavna dijela: Informativni i Student Fun Zone int
 Struktura Stranice i Navigacija:
 
 O kursevima	-- index.html	-- Početna stranica i osnovne informacije.
+
 Popis kurseva -- popis.html	-- Detaljna lista svih ponuđenih kurseva/predmeta.
+
 Raspored -- raspored.html	-- Prikaz sedmičnog/semestralnog rasporeda.
+
 Kontakt -- kontakt.html	-- Kontakt forma i podaci.
+
 Student Fun Zone -- studentFunZone.html	-- Glavni interaktivni modul.
 
 Student Fun Zone
