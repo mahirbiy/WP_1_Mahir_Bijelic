@@ -1,0 +1,165 @@
+html {
+    background: #dee7ef;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #37474F;
+}
+
+article {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 40px 60px;
+    min-height: 650px;
+}
+
+h2 {
+    color: #597a94;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #597a94;
+    display: inline-block;
+}
+
+.buttons {
+    margin: 20px 0 30px 0;
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 18px;
+    border: none;
+    background: #9bbdd4;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 0.95em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #7fa4bf;
+}
+
+button.danger {
+    background: #d66b6b;
+}
+
+button.danger:hover {
+    background: #b95454;
+}
+
+button.cancel {
+    background: #ccc;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+button.cancel:hover {
+    background: #b6b6b6;
+}
+
+.board {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #F8F8F8;
+    border-radius: 12px;
+}
+
+.column {
+    background: #ffffff;
+    border-radius: 15px;
+    width: 32%;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.column h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #5b7d92;
+    font-size: 1.2em;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+}
+
+.taskList {
+    min-height: 300px;
+    padding: 10px 0;
+}
+
+.task {
+    background: #fff9c4;
+    color: #3d3d3d;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 10px 0;
+    font-weight: 500;
+    cursor: grab;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: transform 0.1s ease;
+    border-left: 5px solid #ffeb3b;
+}
+
+.task:active {
+    cursor: grabbing;
+}
+
+.dragging {
+    opacity: 0.5;
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    width: 380px;
+    padding: 30px;
+    margin: 10% auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.modal-content h3 {
+    color: #37474F;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.modal-content input {
+    width: 90%;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #DDDDDD;
+    font-size: 1em;
+}
+
+.modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

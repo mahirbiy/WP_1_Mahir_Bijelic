@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bingo Challenge</title>
+
+    <link rel="stylesheet" href="css/izgled.css" type="text/css" />
+
+   
+    <link rel="stylesheet" href="css/bingo.css" type="text/css" />
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+
+<header>
+    <a href="index.html">
+        <img src="slike/logo-ipi.png" alt="Kursevi IPI">
+    </a>
+    <nav>
+        <ul>
+            <li><a href="index.html">O kursevima</a></li>
+            <li><a href="popis.html">Popis kurseva</a></li>
+            <li><a href="raspored.html">Raspored kurseva</a></li>
+            <li><a class="active" href="studentFunZone.html">Student Fun Zone</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<article>
+    <div class="content" id="contentToConvert">
+        <h2>Bingo Challenge</h2>
+        <p class="info">Pronađi nekoga ko odgovara opisima i popuni 5 polja zaredom — BINGO!</p>
+
+        <table class="bingo-table">
+            <tr>
+                <td>Putovao je van zemlje.</td>
+                <td>Letio je avionom.</td>
+                <td>Ima više od troje braće i sestara.</td>
+                <td>Ima pet ili više kućnih ljubimaca.</td>
+                <td>Voli jesti kisele krastavce.</td>
+            </tr>
+            <tr>
+                <td>Igra košarku.</td>
+                <td>Voli Disney-eve crtane filmove.</td>
+                <td>Voli crtati.</td>
+                <td>Voli HTML.</td>
+                <td>Zna roniti.</td>
+            </tr>
+            <tr>
+                <td>Omiljena boja je narančasta.</td>
+                <td>Ne voli plažu.</td>
+                <td class="free">SLOBODAN PROSTOR</td>
+                <td>Dobar je u matematici.</td>
+                <td>Nema kućne ljubimce.</td>
+            </tr>
+            <tr>
+                <td>Ne voli čokoladu.</td>
+                <td>Boji se pauka.</td>
+                <td>Voli peći kolačiće.</td>
+                <td>Svira instrument.</td>
+                <td>Alergičan je na mačke ili pse.</td>
+            </tr>
+            <tr>
+                <td>Slavi rođendan u oktobru.</td>
+                <td>Voli jesti sir.</td>
+                <td>Igra online igre.</td>
+                <td>Ne voli pizzu.</td>
+                <td>Voli pjevati.</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="pdf-btn" onclick="generatePDF()">Preuzmi kao PDF</button>
+</article>
+
+<footer>&copy; Internacionalna poslovno-informaciona akademija Tuzla</footer>
+
+<script>
+function generatePDF() {
+const element = document.getElementById('contentToConvert'); 
+const options = {
+margin: 1,
+filename: 'Bingo.pdf',
+image: { type: 'jpeg', quality: 0.98 },
+html2canvas: { scale: 2 },
+jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+};
+html2pdf().set(options).from(element).save();
+}
+</script>
+
+</body>
+</html>
+
+

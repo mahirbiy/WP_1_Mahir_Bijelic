@@ -1,0 +1,107 @@
+.mail-btn {
+    background: #9bbdd4 !important; 
+    color: white !important;
+}
+.mail-btn:hover {
+    background: #7fa4bf !important;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6); 
+    backdrop-filter: blur(2px); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; 
+    padding: 25px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px; 
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+}
+
+.modal-content h3 {
+    color: #1D83C5;
+    border-bottom: none;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#recipientEmail {
+    box-sizing: border-box; 
+    width: 90%;
+    margin: 15px 0 20px 0;
+    font-size: 1em;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 0 5%;
+}
+
+.modal-actions button {
+    width: 45%;
+    padding: 10px;
+    
+    font-size: 0.9em; 
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+#sendEmailAction {
+    background-color: #1D83C5;
+    color: white;
+}
+#sendEmailAction:hover {
+    background-color: #0D5D99;
+}
+
+#cancelAction {
+    background-color: #6C757D;
+    color: white;
+}
+#cancelAction:hover {
+    background-color: #5a6268;
+}
+
+.mail-message {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: green;
+}

@@ -1,0 +1,64 @@
+article {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: #597a94;
+}
+
+.info {
+    font-size: 18px;
+    margin-bottom: auto;
+}
+
+.bingo-table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 16px;
+    width: auto;
+    max-width: auto;
+}
+
+.bingo-table td {
+    border: 2px solid #333;
+    padding: 15px;
+    background: #fff;
+    width: auto;
+    height: auto;
+}
+
+.bingo-table td:hover {
+    background: #f7f7f7;
+    cursor: pointer;
+}
+
+.free {
+    background: #ffeb99 !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pdf-btn {
+    display: block;
+    width: 180px;
+    margin: 30px auto 0 auto;
+    padding: 10px 0;
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(41,128,185,0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.pdf-btn:hover {
+    background-color: #1c5980;
+    box-shadow: 0 6px 20px rgba(28,89,128,0.7);
+    transform: translateY(-2px);
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Kanban ploča</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<link rel="stylesheet" href="css/izgled.css" /> 
+<link rel="stylesheet" href="css/kanban.css">
+<link rel="stylesheet" href="css/mail.css"> </head>
+
+<body>
+
+<header>
+    <a href="index.html"><img src="slike/logo-ipi.png" alt="IPI"></a>
+    <nav>
+        <ul>
+            <li><a href="index.html">O kursevima</a></li>
+            <li><a href="popis.html">Popis kurseva</a></li>
+            <li><a href="raspored.html">Raspored</a></li>
+            <li><a href="studentFunZone.html" class="active">Student Fun Zone</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<article>
+
+<h2>Kanban ploča</h2>
+
+<div class="buttons">
+    <button id="addTaskBtn">+ Dodaj zadatak</button>
+    <button id="saveBoardBtn">Snimi kao PDF</button>
+    
+    <button id="sendMailButton" class="primary-btn mail-btn">Pošalji mailom</button>
+    
+    <button id="clearBoardBtn" class="danger">Očisti ploču</button>
+</div>
+
+<div id="taskModal" class="modal">
+  <div class="modal-content">
+      <h3>Novi zadatak</h3>
+      <input type="text" id="taskInput" placeholder="Upišite zadatak..." />
+      <div class="modal-buttons">
+          <button id="modalAdd">Dodaj</button>
+          <button id="modalCancel" class="cancel">Odustani</button>
+      </div>
+  </div>
+</div>
+
+<div id="clearModal" class="modal">
+  <div class="modal-content">
+      <h3>Očisti cijelu ploču?</h3>
+      <p>Ovu radnju nije moguće poništiti.</p>
+      <div class="modal-buttons">
+          <button id="clearYes" class="danger">Očisti</button>
+          <button id="clearNo" class="cancel">Odustani</button>
+      </div>
+  </div>
+</div>
+
+<div id="emailModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Pošalji sadržaj stranice</h3>
+        <p>Unesite email adresu na koju želite poslati link:</p>
+        <input type="email" id="recipientEmail" placeholder="vas.email@primjer.com">
+        <div class="modal-actions">
+            <button id="sendEmailAction" class="primary-btn">Pošalji</button>
+            <button id="cancelAction" class="secondary-btn">Poništi</button>
+        </div>
+        <div id="mailMessage" class="mail-message"></div>
+    </div>
+</div>
+
+<div class="board">
+    <div class="column" data-status="todo">
+        <h2>To Do</h2>
+        <div class="taskList"></div>
+    </div>
+
+    <div class="column" data-status="progress">
+        <h2>In Progress</h2>
+        <div class="taskList"></div>
+    </div>
+
+    <div class="column" data-status="done">
+        <h2>Done</h2>
+        <div class="taskList"></div>
+    </div>
+</div>
+
+</article>
+
+<footer>
+    Web programiranje 2025 © Internacionalna poslovno-informaciona akademija Tuzla
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="js/kanban.js"></script>
+<script src="js/kanban.js"></script> </body>
+</html>

@@ -1,0 +1,92 @@
+body {
+    background: #e8f4f8;
+}
+
+article {
+    background: linear-gradient(135deg, #ffffff, #f0f8ff);
+    padding: 50px 70px;
+    min-height: 700px;
+    box-shadow: none;
+}
+
+article h2 {
+    color: #FF5722;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #FFCDD2;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.intro-text {
+    text-align: center;
+    color: #607D8B;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+.fun-tools-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.tool-card {
+    width: 300px;
+    height: 180px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tool-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.tool-card a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    color: inherit;
+}
+
+.tool-card h3 {
+    font-size: 1.5em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.tool-card p {
+    font-size: 0.9em;
+    color: rgba(55, 71, 79, 0.8);
+    margin-bottom: 0;
+}
+
+.card-yellow { background-color: #FFEEAA; color: #795548; }
+.card-yellow h3 { color: #795548; }
+
+.card-cyan { background-color: #B2EBF2; color: #00838F; }
+.card-cyan h3 { color: #00838F; }
+
+.card-orange { background-color: #FFECB3; color: #E65100; }
+.card-orange h3 { color: #E65100; }
+
+.card-green { background-color: #C8E6C9; color: #388E3C; }
+.card-green h3 { color: #388E3C; }
+
+.card-coral { background-color: #FFCCBC; color: #F4511E; }
+.card-coral h3 { color: #F4511E; }

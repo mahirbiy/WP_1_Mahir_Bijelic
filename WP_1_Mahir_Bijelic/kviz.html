@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kviz</title>
+    <link rel="stylesheet" href="css/izgled.css" type="text/css">
+    <link rel="stylesheet" href="css/kviz.css" type="text/css">
+
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+<header>
+    <a href="index.html">
+        <img src="slike/logo-ipi.png" alt="Kursevi IPI">
+    </a>
+    <nav>
+        <ul>
+            <li><a href="index.html">O kursevima</a></li>
+            <li><a href="popis.html">Popis kurseva</a></li>
+            <li><a href="raspored.html">Raspored kurseva</a></li>
+            <li><a href="studentFunZone.html">Student Fun Zone</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<article>
+
+    <h1>K V I Z</h1>
+    <p class="intro">
+        Dobrodošli u studentski kviz! Testirajte svoje znanje o HTML-u i osnovama weba.<br>
+        Odaberite tačan odgovor(e) za svako pitanje.
+    </p>
+
+    <form id="quizForm">
+
+        <h3>1. Šta je skraćenica HTML?</h3>
+        <label><input type="radio" name="q1" value="a"> HyperText Markup Language</label><br>
+        <label><input type="radio" name="q1" value="b"> HighText Markdown Language</label><br>
+        <label><input type="radio" name="q1" value="c"> HyperText Makeup Language</label><br>
+
+        <h3>2. Koje se oznake koriste za izradu popisa u HTML-u?</h3>
+        <label><input type="checkbox" name="q2" value="a"> &lt;ul&gt;</label><br>
+        <label><input type="checkbox" name="q2" value="b"> &lt;ol&gt;</label><br>
+        <label><input type="checkbox" name="q2" value="c"> &lt;li&gt;</label><br>
+        <label><input type="checkbox" name="q2" value="d"> &lt;br&gt;</label><br>
+
+        <h3>3. Koja se oznaka koristi za umetanje slike?</h3>
+        <label><input type="radio" name="q3" value="a"> &lt;image&gt;</label><br>
+        <label><input type="radio" name="q3" value="b"> &lt;img&gt;</label><br>
+        <label><input type="radio" name="q3" value="c"> &lt;src&gt;</label><br>
+
+        <h3>4. Koji od sljedećih su valjani HTML atributi?</h3>
+        <label><input type="checkbox" name="q4" value="a"> href</label><br>
+        <label><input type="checkbox" name="q4" value="b"> src</label><br>
+        <label><input type="checkbox" name="q4" value="c"> bold</label><br>
+        <label><input type="checkbox" name="q4" value="d"> alt</label><br>
+
+        <h3>5. Koji je ispravan način za stvaranje linkova u HTML-u?</h3>
+        <label><input type="radio" name="q5" value="a"> &lt;a url="example.com"&gt;Click&lt;/a&gt;</label><br>
+        <label><input type="radio" name="q5" value="b"> &lt;a href="example.com"&gt;Click&lt;/a&gt;</label><br>
+        <label><input type="radio" name="q5" value="c"> &lt;link&gt;Click&lt;/link&gt;</label><br>
+
+        <button type="button" class="quiz-btn" onclick="checkAnswers()">Provjerite odgovore</button>
+
+    </form>
+
+</article>
+
+<div id="resultModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id="modalResult"></p>
+    <button onclick="resetQuiz(); closeModal()">Pokušaj ponovno</button>
+  </div>
+</div>
+
+<footer>&copy; Internacionalna poslovno-informaciona akademija Tuzla</footer>
+
+<script>
+function checkAnswers() {
+    let score = 0;
+    const total = 5;
+    const answers = {
+        q1: ["a"],
+        q2: ["a","b","c"],
+        q3: ["b"],
+        q4: ["a","b","d"],
+        q5: ["b"]
+    };
+
+    for (let i = 1; i <= total; i++) {
+        const inputs = document.querySelectorAll(`input[name="q${i}"]`);
+        const selected = Array.from(inputs)
+                              .filter(input => input.checked)
+                              .map(input => input.value);
+
+        if (selected.length === answers[`q${i}`].length &&
+            selected.every(val => answers[`q${i}`].includes(val))) {
+            score++;
+        }
+    }
+
+ 
+    document.getElementById("modalResult").textContent = `Osvojili ste ${score} od ${total} poena!`;
+    openModal();
+}
+
+
+function openModal() {
+    document.getElementById("resultModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("resultModal").style.display = "none";
+}
+
+function resetQuiz() {
+    document.getElementById("quizForm").reset();
+    document.getElementById("modalResult").textContent = "";
+    closeModal();
+}
+
+
+document.querySelector(".close").onclick = closeModal;
+
+
+window.onclick = function(event) {
+    const modal = document.getElementById("resultModal");
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+</script>
+
+</body>
+</html>
+
+
